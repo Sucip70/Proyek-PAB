@@ -19,7 +19,7 @@ class SearchPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Rank"),
+          title: Text("Category"),
         ),
         body: ListView(
           padding: const EdgeInsets.all(0.8),
@@ -27,7 +27,6 @@ class SearchPage extends StatelessWidget {
             Text('Device'),
             Container(
               height: 200,
-              color: Colors.amber,
               child: GridView.count(
                 primary: false,
                 crossAxisCount: 4,
@@ -36,9 +35,9 @@ class SearchPage extends StatelessWidget {
                       flex: 4,
                       child: Container(
                         height: 80,
-                        // color: Colors.green,
                         padding: const EdgeInsets.all(1.0),
                         child: Card(
+                            color: Colors.deepPurpleAccent,
                             child: InkWell(
                               splashColor: Colors.blue.withAlpha(30),
                               onTap: () {
@@ -48,10 +47,7 @@ class SearchPage extends StatelessWidget {
                                   child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  // Image.asset(
-                                  //   device[index][1],
-                                  //   scale: 5,
-                                  // ),
+                                  Icon(Icons.phone_android),
                                   Text('${device[index]}')
                                 ],
                               )),
